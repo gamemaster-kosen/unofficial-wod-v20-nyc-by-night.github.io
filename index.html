@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <!-- leaflet : core -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -8,15 +9,16 @@
     <script src="https://unpkg.com/leaflet.fullscreen/dist/Control.FullScreen.umd.js"></script>
     <!-- style -->
     <style>
-        /* leaflet map */
         #map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
     </style>
+    <!-- custom css file(s) -->
+     <link rel="stylesheet" href="map.css">
 </head>
 
 <body>
-    <!-- location of the leaftlet map on the webpage -->
+    <!-- map -->
     <div id="map"></div>
-    <!-- script -->
+    <!-- script : map -->
     <script>
         // map config
         const config = {
@@ -34,4 +36,6 @@
         // fullscreen button
         map.addControl(new L.Control.FullScreen());
     </script>
+    <!-- information panel -->
+    <div id="map-information-panel"></div>
 </body>
