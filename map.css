@@ -90,3 +90,32 @@
     height: 33px;
     align-content: center;
 }
+
+
+/* map sidebar */
+
+.map-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 294px;
+    height: 100%;
+    background-color: black;
+    z-index: 400;
+    border: 2px solid white;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.map-sidebar.wod-logo {
+    position: relative;
+    filter: none;
+    height: 50px;
+    width: 100%;
+    align-content: center;
+    border: none;
+    border-bottom: 2px solid white;
+    /* font */
+    font-size: x-large;
+    text-align: center;
+    color: white;
+}

@@ -1,12 +1,12 @@
 // map config
 const config = {
-    minZoom : 10,
+    minZoom : 11,
     maxZoom: 18,
     fullscreenControl: true
 };
 
 // create map variable
-var map = L.map('map', config).setView(new L.LatLng(40.6971415, -73.9795060), 10);
+var map = L.map('map', config).setView(new L.LatLng(40.6971415, -73.9795060), 11);
 
 // access map tiles ; the images which comprise the map
 L.tileLayer('https://api.maptiler.com/maps/toner-v2/{z}/{x}/{y}.png?key=I9qRimdCWrc5RcbYL2gx', {
@@ -69178,7 +69178,7 @@ function highlightFeature(e) {
 
     layer.setStyle({
         weight: 5,
-        fillOpacity: 0.5
+        fillOpacity: 0.2
     });
 
     layer.bringToFront();
@@ -69228,24 +69228,6 @@ geoJson = L.geoJson(newYorkCityBoroughData, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
-
-
-// info from leaflet tutorial
-var info = L.control();
-
-info.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-    this.update();
-    return this._div;
-};
-
-// method that we will use to update the control based on feature properties passed
-info.update = function (props) {
-    this._div.innerHTML = '<h1>New York City</h1>' + (props ?
-        '<h2>' + props.name + '</h2>': '<h2></h2>' );
-};
-
-info.addTo(map);
 
 // fullscreen button
 map.addControl(new L.Control.FullScreen());
